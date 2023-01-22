@@ -10,8 +10,32 @@
       rel="stylesheet"
     />
     <title>Bagas Site</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
+    <!-- scroll to top start -->
+    <a
+      href="#"
+      class="fixed right-4 flex -bottom-1/4 bg-[#FF0032] hover:opacity-80 transition duration-300 ease-in-out z-[999] text-white py-2 px-2 rounded-full"
+      id="scroll-top"
+      data-aos="fade-up"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        class="fill-current"
+      >
+        <path
+          d="m12 3.879-7.061 7.06 2.122 2.122L12 8.121l4.939 4.94 2.122-2.122z"
+        ></path>
+        <path
+          d="m4.939 17.939 2.122 2.122L12 15.121l4.939 4.94 2.122-2.122L12 10.879z"
+        ></path></svg
+    ></a>
+    <!-- scroll to top end -->
     <!-- header start -->
     <header
       class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
@@ -101,6 +125,11 @@
                 >Reactjs, React Native.</span
               >
             </p>
+            <a
+              href="https://drive.google.com/file/d/1gW2Q6kR4N-RsJ4h7Tp_JCYK0ZpZKtYrR/view?usp=sharing"
+              class="text-base font-semibold text-white bg-[#FF0032] py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+              >Download CV Saya</a
+            >
           </div>
           <div class="w-full self-end px-4 lg:w-1/2">
             <div class="relative mt-10 lg:mt-0 lg:right-0">
@@ -131,11 +160,71 @@
       </div>
     </section>
     <!-- hero section end -->
+    <!-- tools start -->
+    <section class="lg:pt-16 lg:pb-16 lg:flex hidden" id="carousel">
+      <div class="container">
+        <div class="flex items-center">
+          <div id="carousel_slider" class="relative flex items-center w-full">
+            <ul
+              id="carousel_list"
+              class="absolute w-full left-0 translate-y-10 flex items-center justify-around"
+            >
+              <li
+                id="carousel_item"
+                class="flex items-center justify-center border border-dark hover:border-primary w-[250px] h-[80px] cursor-pointer rounded-lg"
+              >
+                <img
+                  src="https://www.buildwithangga.com/themes/front/images/logo/figma-logomark.svg"
+                  alt="figma"
+                />
+                <div class="block">
+                  <h2 class="font-semibold text-xl text-dark mx-4">Figma</h2>
+                  <p class="font-medium text-sm text-slate-500 mx-4">
+                    UI/UX Designer
+                  </p>
+                </div>
+              </li>
+              <li
+                id="carousel_item"
+                class="flex items-center justify-center border border-dark hover:border-primary w-[300px] h-[80px] cursor-pointer rounded-lg"
+              >
+                <img
+                  src="https://www.buildwithangga.com/themes/front/images/logo/kotlin.svg"
+                  alt="kotlin"
+                />
+                <div class="block">
+                  <h2 class="font-semibold text-xl text-dark mx-4">Kotlin</h2>
+                  <p class="font-medium text-sm text-slate-500 mx-4">
+                    Android Developer
+                  </p>
+                </div>
+              </li>
+              <li
+                id="carousel_item"
+                class="flex items-center justify-center border border-dark hover:border-primary w-[300px] h-[80px] cursor-pointer rounded-lg"
+              >
+                <img
+                  src="https://www.buildwithangga.com/themes/front/images/logo/react.svg"
+                  alt="react"
+                />
+                <div class="block">
+                  <h2 class="font-semibold text-xl text-dark mx-4">React</h2>
+                  <p class="font-medium text-sm text-slate-500 mx-4">
+                    Front End Developer
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- tools end -->
     <!-- section about start -->
     <section id="about" class="pt-32 pb-32">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full px-4 mb-10 lg:w-1/2">
+          <div class="w-full px-4 mb-10 lg:w-1/2" data-aos="fade-left">
             <h4 class="font-bold uppercase text-primary text-lg mb-3">
               Tentang Saya
             </h4>
@@ -143,12 +232,12 @@
               Bagas Haryadi
             </h2>
             <p class="font-medium text-slate-500 text-base max-w-xl lg:text-lg">
-              Saya seorang pengembang frontend. kuat dalam bahasa pemrograman
-              javascript. Framework/library yang biasa digunakan untuk
-              javascript ini antara lain, Reactjs, React Native.
+              Halo Perkenalkan saya Bagas Haryadi tinggal di Jakarta Utara,
+              Priok saat ini saya sedang berkuliah di salah satu Universitas di
+              Jakarta Yaitu Univ Bina sarana Informatika
             </p>
           </div>
-          <div class="w-full px-4 lg:w-1/2">
+          <div class="w-full px-4 lg:w-1/2" data-aos="fade-right">
             <h3 class="font-semibold text-2xl mb-4 lg:text-3xl lg:pt-10">
               Mari Berteman
             </h3>
@@ -225,9 +314,16 @@
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-primary mb-2">Portofolio</h4>
-            <h2 class="font-bold text-dark text-3xl mb-4">Project Saya</h2>
-            <p class="font-medium text-md text-slate-500">
+            <h4
+              class="font-semibold text-lg text-primary mb-2"
+              data-aos="fade-up"
+            >
+              Portofolio
+            </h4>
+            <h2 class="font-bold text-dark text-3xl mb-4" data-aos="fade-up">
+              Project Saya
+            </h2>
+            <p class="font-medium text-md text-slate-500" data-aos="fade-up">
               Berikut ini adalah project yang sudah saya buat selama saya
               menjadi <br />
               <span class="font-bold text-dark"
@@ -237,7 +333,7 @@
           </div>
         </div>
         <div class="w-full px-4 flex flex-wrap justify-center">
-          <div class="mb-12 p-4 md:w-1/2">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="fade-up">
             <div
               class="rounded-md shadow-md overflow-hidden px-4 py-2 bg-white"
             >
@@ -269,7 +365,7 @@
               >
             </div>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="fade-up">
             <div
               class="rounded-md shadow-md overflow-hidden px-4 py-2 bg-white"
             >
@@ -301,7 +397,7 @@
               >
             </div>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="fade-up">
             <div
               class="rounded-md shadow-md overflow-hidden px-4 py-2 bg-white"
             >
@@ -333,7 +429,7 @@
               >
             </div>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="fade-up">
             <div
               class="rounded-md shadow-md overflow-hidden px-4 py-2 bg-white"
             >
@@ -374,16 +470,19 @@
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-primary mb-2">
+            <h4
+              class="font-semibold text-lg text-primary mb-2"
+              data-aos="fade-up"
+            >
               Pengalaman Bekerja Sebagai
             </h4>
-            <h2 class="font-bold text-white text-3xl mb-4">
+            <h2 class="font-bold text-white text-3xl mb-4" data-aos="fade-up">
               Front End Developer
             </h2>
           </div>
         </div>
         <div class="w-full px-4 flex flex-wrap justify-center">
-          <div class="mb-12 p-4 md:w-1/2">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="fade-left">
             <div
               class="rounded-md shadow-md overflow-hidden px-4 py-2 bg-white"
             >
@@ -410,7 +509,7 @@
               </p>
             </div>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="fade-right">
             <div
               class="rounded-md shadow-md overflow-hidden px-4 py-2 bg-white"
             >
@@ -432,7 +531,7 @@
                 perusahaan yang bekerja sama dengan Steradian Data Optima
               </p>
               <p class="font-modium text-md text-red-500">
-                Desember 2022 - <span class="text-primary">Masi Bekerja</span>
+                November 2022 - <span class="text-primary">Masi Bekerja</span>
               </p>
             </div>
           </div>
@@ -445,14 +544,19 @@
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-primary mb-2">Sertifikat</h4>
-            <h2 class="font-bold text-dark text-3xl mb-4">
+            <h4
+              class="font-semibold text-lg text-primary mb-2"
+              data-aos="fade-up"
+            >
+              Sertifikat
+            </h4>
+            <h2 class="font-bold text-dark text-3xl mb-4" data-aos="fade-up">
               E-Sertifikat yang saya dapatkan
             </h2>
           </div>
         </div>
         <div class="w-full px-4 flex flex-wrap justify-center">
-          <div class="mb-12 p-4 md:w-1/2">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="fade-left">
             <div
               class="rounded-md shadow-md overflow-hidden px-4 py-2 bg-white"
             >
@@ -472,7 +576,7 @@
               </p>
             </div>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="fade-right">
             <div
               class="rounded-md shadow-md overflow-hidden px-4 py-2 bg-white"
             >
@@ -488,7 +592,7 @@
                 class="font-medium text-base text-slate-500 leading-relaxed mb-3"
               >
                 Berikut ini adalah E-Sertifikat yang saya dapatkan pada saat
-                lomba di kampus UBSI yang kami buatkan Aplikasi MauKost
+                lomba PIKMI di kampus UBSI dengan mendapatkan Juara 1
               </p>
             </div>
           </div>
@@ -500,11 +604,15 @@
     <footer class="bg-dark py-12">
       <div class="container">
         <h2 class="font-semibold text-base text-white text-center">
-          Baga Haryadi ❤ 2023 Website Portofolio
+          Bagas Haryadi ❤ 2023 Website Portofolio
         </h2>
       </div>
     </footer>
     <!-- footer end -->
     <script src="dist/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

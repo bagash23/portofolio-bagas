@@ -6,6 +6,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.show-scroll-top {
+  @apply visible bottom-1.5;
+}
+
 .navbar-fixed {
   @apply fixed z-[9999] bg-white bg-opacity-70;
   backdrop-filter: blur(5px);
