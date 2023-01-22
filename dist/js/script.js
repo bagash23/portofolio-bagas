@@ -18,15 +18,15 @@ window.onscroll = function () {
 };
 
 // scroll to top
-// function scrollToTop() {
-//   const scrollTop = document.querySelector("#scroll-top");
-//   if (window.pageYOffset > 500) {
-//     scrollTop.classList.add("show-scroll-top");
-//   } else {
-//     scrollTop.classList.remove("show-scroll-top");
-//   }
-// }
-// window.addEventListener("scroll", scrollToTop);
+function scrollToTop() {
+  const scrollTop = document.querySelector("#scroll-top");
+  if (window.pageYOffset > 500) {
+    scrollTop.classList.add("show-scroll-top");
+  } else {
+    scrollTop.classList.remove("show-scroll-top");
+  }
+}
+window.addEventListener("scroll", scrollToTop);
 
 let carouselSlider = document.querySelector("#carousel_slider");
 let list = document.querySelector("#carousel_list");
